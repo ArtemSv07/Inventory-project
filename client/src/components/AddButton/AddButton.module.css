@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.button {
+  display: flex;
+  gap: 15px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.iconContainer {
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background-color: var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border: none;
+}
+
+.iconTitle {
+  width: 35px;
+  height: 35px;
+  border: 4px solid #719d4b;
+}
+
+.text {
+  color: var(--green);
+}
+
+.title {
+  color: black;
+  font-size: 32px;
+  line-height: 1.33;
+}

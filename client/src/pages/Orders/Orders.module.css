@@ -1,0 +1,128 @@
+.container {
+  display: flex;
+  gap: 20px;
+}
+.orderGrup {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.orderContainer {
+  border: 2px solid var(--borderColor);
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 30px;
+  gap: 15px;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: var(--white);
+
+  @media screen and (min-width: 1440px) {
+    flex-direction: row;
+    min-width: 300px;
+  }
+}
+
+.title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  color: var(--text);
+  max-width: calc(100vw * 0.3);
+
+  /* @media screen and (min-width: 1200px) and (max-width: 1439px) {
+    max-width: calc(100vw * 0.28);
+  } */
+}
+
+.title:hover::after,
+.title:focus:after {
+  content: attr(data-full-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  white-space: normal;
+  word-wrap: break-word;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: calc(100vw * 0.3);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  line-height: 17px;
+  color: var(--textSecond);
+}
+
+.textSpan {
+  font-weight: 900;
+  color: var(--text);
+}
+
+.textDate {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--textSecond);
+}
+
+.textDateContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.buttonList {
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 7px;
+
+  border: 1px solid var(--borderColor);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0px 1px 2px rgba(255, 255, 255, 0.8);
+
+  transition: border-color var(--transTime) ease,
+    box-shadow var(--transTime) ease;
+}
+
+.buttonList:hover,
+.buttonList:focus {
+  border-color: var(--textSecond);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  outline: none;
+}
+
+.textMany {
+  display: flex;
+  flex-direction: column;
+  min-width: 80px;
+}
+
+.containerTitle {
+  display: flex;
+  justify-content: space-between;
+  @media screen and (min-width: 1440px) {
+    gap: 10px;
+  }
+}
+
+.containerText {
+  display: flex;
+  gap: 30px;
+  /* margin-left: auto; */
+}
